@@ -11,14 +11,14 @@ double y=0,s=0,n=0,s1=0,sum=0;
         y = exp(cos(x))*cos(sin(x));
         for(; n<=20; n++)
       {
-            s +=cos(x)/factorial(n);
+            s +=cos(n*x)/factorial(n);
       }
       n=0;
         do{
-            s1=cos(x)/factorial(n);
+            s1=cos(n*x)/factorial(n);
             sum += s1;
             n++;
-        }while(s1>0.0001);
+        }while(fabs(s1)>0.0001);
         
      
         printf("X= %.5lf  ",x);
